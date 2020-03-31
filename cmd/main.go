@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -31,9 +32,11 @@ func main() {
 			if c.Args().Len() > 2 {
 				return cli.Exit("too much arguments", 1)
 			}
-			if err := fuzzyelem.Search(id, c.Args().Get(0), c.Args().Get(1)); err != nil {
+			path, err := fuzzyelem.Search(id, c.Args().Get(0), c.Args().Get(1))
+			if err != nil {
 				return cli.Exit(err.Error(), 1)
 			}
+			fmt.Println(path)
 			return nil
 		},
 	}
