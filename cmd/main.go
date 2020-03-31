@@ -16,7 +16,7 @@ func main() {
 		Name:  "fuzzyelem",
 		Usage: "search in a target document for htlm element similar to element from source document",
 
-		UsageText: "fuzzyelem source target",
+		UsageText: "fuzzyelem [GLOBAL OPTIONS] source target",
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:        "id",

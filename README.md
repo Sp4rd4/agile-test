@@ -12,4 +12,5 @@ go build -o ./bin/fuzzyelem ./cmd
 Binary usage:
 ```
 ./bin/fuzzyelem help
+./bin/fuzzyelem --id make-everything-ok-button ./samples/sample-0-origin.html ./samples/sample-4-the-mash.html
 ```
